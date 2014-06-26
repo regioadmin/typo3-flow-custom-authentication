@@ -1,0 +1,13 @@
+-
+  name: 'Authentication Actions'
+  uriPattern: 'authentication(/{@action})'
+  defaults:
+    '@controller': 'Login'
+    '@action':
+-
+  name: 'Fallback rule'
+  uriPattern:    ''
+  defaults:
+    '@controller': 'Login'
+    '@action':     'index'
+

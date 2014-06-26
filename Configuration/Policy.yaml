@@ -1,0 +1,16 @@
+#                                                                        #
+# Security policy definition                                             #
+#                                                                        #
+# This file contains the security policy configuration for the           #
+# package                                                         #
+
+resources:
+  methods:
+    WL_Demo_Protected_Methods: 'method(WL\Demo\Controller\StandardController->showAction())'
+roles:
+  Administrator: []
+acls:
+  Administrator:
+    methods:
+      WL_Demo_Protected_Methods: GRANT
+

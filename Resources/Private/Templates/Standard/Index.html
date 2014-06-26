@@ -1,0 +1,10 @@
+<f:layout name="Default" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+	<h1>Hello here is StandardController indexAction</h1>
+	<p>to access showAction:</p>
+	<f:link.action action="show" controller="Standard" arguments="{key:'valid'}">authenticate by custom KeyProvider </f:link.action><br>
+	<f:link.action action="show" controller="Standard">authenticate by UsernamePasswordProvider (demo1/demo1)</f:link.action>
+</f:section>

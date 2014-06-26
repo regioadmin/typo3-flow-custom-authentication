@@ -1,0 +1,22 @@
+<f:layout name="Default" />
+
+<f:section name="Title">SHOW view of Standard controller</f:section>
+
+<f:section name="Content">
+	<h1></h1>
+	<p>Protected content</p>
+	<f:security.ifHasRole role="Administrator">
+		<p>Hello your Role is <strong>admin</strong></p>
+	</f:security.ifHasRole>
+
+
+
+	<f:security.ifAuthenticated>
+		<p>You are <strong>authenticated</strong></p>
+		<p><f:link.action action="logout" controller="Login" class="btn" style="margin-right: 12px">Logout</f:link.action></p>
+		<f:debug title="Your Provider">{account.authenticationprovidername}</f:debug>
+		<f:debug title="Your Tokens">{tokens}</f:debug>
+		<f:debug title="Your Account">{account.party}</f:debug><br>
+	</f:security.ifAuthenticated>
+
+</f:section>

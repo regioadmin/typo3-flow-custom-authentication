@@ -1,0 +1,48 @@
+#                                                                        #
+# Example Settings                                                       #
+#                                                                        #
+# This file contains settings for various parts of the application.      #
+# Copy this file to Settings.yaml, and adjust as necessary.              #
+#                                                                        #
+# Please refer to the default settings file(s) or the manuals for        #
+# possible configuration options.                                        #
+#                                                                        #
+
+
+TYPO3:
+  Flow:
+    i18n:
+      defaultLocale: 'de_DE'
+    security:
+      authentication:
+        authenticationStrategy: oneToken
+        providers:
+          DefaultProvider:
+            provider: PersistedUsernamePasswordProvider
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+                routeValues:
+                  '@package': 'WL.Demo'
+                  '@controller': 'Login'
+                  '@action': 'login'
+          KeyProvider:
+            provider: 'WL\Demo\Security\Authentication\Provider\KeyProvider'
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+                routeValues:
+                  '@package': 'WL.Demo'
+                  '@controller': 'Login'
+                  '@action': 'login'
+WL:
+  Demo:
+    notifications:
+      mode: 'production'  # development or production, in developmentmode mails are sent to "to"
+      from:
+        email: 'hilfe@komsis.at'
+        name: 'KOMSIS'
+      to:
+        email: 'admin@regionalberatung.at'
+        name: 'Administrator'
+      encryptionkey: 'wali531'
+    domain: 'www3.komsis.at' #adjust domain for onlinesubmitter notification
+    domaindevelopment: 'dev.komsis.at'
