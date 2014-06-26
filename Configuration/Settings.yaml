@@ -33,16 +33,3 @@ TYPO3:
                   '@package': 'WL.Demo'
                   '@controller': 'Login'
                   '@action': 'login'
-WL:
-  Demo:
-    notifications:
-      mode: 'production'  # development or production, in developmentmode mails are sent to "to"
-      from:
-        email: 'hilfe@komsis.at'
-        name: 'KOMSIS'
-      to:
-        email: 'admin@regionalberatung.at'
-        name: 'Administrator'
-      encryptionkey: 'wali531'
-    domain: 'www3.komsis.at' #adjust domain for onlinesubmitter notification
-    domaindevelopment: 'dev.komsis.at'
